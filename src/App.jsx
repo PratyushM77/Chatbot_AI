@@ -7,7 +7,7 @@ function App() {
   const[question,setQuestion] = useState("")
 
   const FetchAnswer = async () => {
-    const api = import.meta.env.VITE_API_KEY
+    const api = import.meta.env.VITE_GEMINI_API_KEY
     const response = await axios({
       url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${api}`,
       method: "post",
